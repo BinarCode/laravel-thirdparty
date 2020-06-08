@@ -1,17 +1,17 @@
 {
-    "name": "spatie/laravel-thirdparty",
+    "name": "binarcode/laravel-thirdparty",
     "description": "",
     "keywords": [
-        "spatie",
+        "binarcode",
         "laravel-thirdparty"
     ],
-    "homepage": "https://github.com/spatie/laravel-thirdparty",
+    "homepage": "https://github.com/binarcode/laravel-thirdparty",
     "license": "MIT",
     "authors": [
         {
             "name": "Eduard Lupacescu",
             "email": "eduard.lupacescu@binarcode.com",
-            "homepage": "https://spatie.be",
+            "homepage": "https://binarcode.com",
             "role": "Developer"
         }
     ],
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "BinarCode\\LaravelThirdParty\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "BinarCode\\LaravelThirdParty\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "BinarCode\\LaravelThirdParty\\ThirdPartyServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "LaravelThirdParty": "BinarCode\\LaravelThirdParty\\ThirdPartyFacade"
             }
         }
     },
