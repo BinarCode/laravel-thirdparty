@@ -3,6 +3,7 @@
 namespace BinarCode\LaravelThirdParty\Tests;
 
 use BinarCode\LaravelThirdParty\ThirdPartyServiceProvider;
+use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -12,6 +13,8 @@ class TestCase extends Orchestra
         parent::setUp();
 
         $this->withFactories(__DIR__.'/database/factories');
+
+        Route::thirdparty('my-thirdparty-routes');
     }
 
     protected function getPackageProviders($app)

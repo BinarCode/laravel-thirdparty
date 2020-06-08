@@ -8,7 +8,7 @@ class ThirdPartyControllerTest extends TestCase
 {
     public function test_third_party_controller_returns_ok()
     {
-        $this->get('/')
+        $this->get('/my-thirdparty-routes')
             ->assertOk();
     }
 }

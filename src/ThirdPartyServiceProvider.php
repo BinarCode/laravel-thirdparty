@@ -16,10 +16,6 @@ class ThirdPartyServiceProvider extends ServiceProvider
                 __DIR__.'/../config/thirdparty.php' => config_path('thirdparty.php'),
             ], 'config');
 
-            $this->publishes([
-                __DIR__.'/../resources/views' => base_path('resources/views/vendor/thirdparty'),
-            ], 'views');
-
             if (! class_exists('CreatePackageTables')) {
                 $this->publishes([
                     __DIR__ . '/../database/migrations/create_third_party_tables.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_third_party_tables.php'),
@@ -30,14 +26,17 @@ class ThirdPartyServiceProvider extends ServiceProvider
                 MakeThirdPartyCommand::class,
             ]);
 
-            Route::get('/', [ThirdPartyController::class, 'index']);
+            Route::macro('thirdparty', function (string $prefix) {
+                Route::prefix($prefix)->group(function () {
+                    Route::get('/', [ThirdPartyController::class, 'index']);
+                });
+            });
         }
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'thirdparty');
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/thirdparty.php', 'thirdparty');
+        $this->mergeConfigFrom(__DIR__ . '/../config/thirdparty.php', 'thirdparty');
     }
 }

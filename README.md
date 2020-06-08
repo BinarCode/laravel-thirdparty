@@ -36,9 +36,12 @@ return [
 
 ## Usage
 
+Add routes from the package using `thirdparty` route macro: 
 ``` php
-// 
+    Route::thirdparty('my-thirdparty-routes');
 ```
+
+This will give you package routes, as `list` all third parties.
 
 ## Testing
 
