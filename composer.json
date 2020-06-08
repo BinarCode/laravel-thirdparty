@@ -1,16 +1,16 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "spatie/laravel-thirdparty",
+    "description": "",
     "keywords": [
         "spatie",
-        ":package_name"
+        "laravel-thirdparty"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/spatie/laravel-thirdparty",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Eduard Lupacescu",
+            "email": "eduard.lupacescu@binarcode.com",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
