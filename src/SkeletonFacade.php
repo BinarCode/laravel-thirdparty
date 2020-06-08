@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace BinarCode\Skeleton;
 
 use Illuminate\Support\Facades\Facade;
 
