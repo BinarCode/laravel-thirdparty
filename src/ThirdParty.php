@@ -1,6 +1,6 @@
 <?php
 
-namespace BinarCode\Skeleton;
+namespace BinarCode\LaravelThirdParty;
 
 class ThirdParty
 {
