@@ -5,9 +5,9 @@ namespace BinarCode\Skeleton;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Spatie\Skeleton\Skeleton
+ * @see \BinarCode\LaravelThirdParty\ThirdParty
  */
-class SkeletonFacade extends Facade
+class ThirdPartyFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {

@@ -2,6 +2,6 @@
 
 namespace BinarCode\Skeleton;
 
-class Skeleton
+class ThirdParty
 {
 }
