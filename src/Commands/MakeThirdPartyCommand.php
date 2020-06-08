@@ -4,11 +4,11 @@ namespace BinarCode\LaravelThirdParty\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class MakeThirdPartyCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'make:third-party';
 
-    public $description = 'My command';
+    public $description = 'Make third party component.';
 
     public function handle()
     {

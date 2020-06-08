@@ -2,8 +2,8 @@
 
 namespace BinarCode\LaravelThirdParty;
 
+use BinarCode\LaravelThirdParty\Commands\MakeThirdPartyCommand;
 use Illuminate\Support\ServiceProvider;
-use BinarCode\LaravelThirdParty\Commands\SkeletonCommand;
 
 class ThirdPartyServiceProvider extends ServiceProvider
 {
@@ -25,7 +25,7 @@ class ThirdPartyServiceProvider extends ServiceProvider
             }
 
             $this->commands([
-                SkeletonCommand::class,
+                MakeThirdPartyCommand::class,
             ]);
         }
 
