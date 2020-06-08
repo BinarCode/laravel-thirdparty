@@ -4,14 +4,21 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSkeletonTables extends Migration
+class CreateThirdPartyTables extends Migration
 {
     public function up()
     {
-        Schema::create('skeleton_tables', function (Blueprint $table) {
+        Schema::create(config('thirdparty.table_name', 'third_parties'), function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            // add fields
+            $table->string('key', 100)->unique();
+            $table->string('name', 100);
+            $table->text('description')->nullable();
+            $table->string('url', 300)->nullable();
+            $table->boolean('active')->default(false)->comment('If cofigurations done.');
+            $table->boolean('enabled')->default(false)->comment('Could be used');
+            $table->json('private_information')->nullable();
+            $table->json('public_information')->nullable();
 
             $table->timestamps();
         });

@@ -3,6 +3,8 @@
 namespace BinarCode\LaravelThirdParty;
 
 use BinarCode\LaravelThirdParty\Commands\MakeThirdPartyCommand;
+use BinarCode\LaravelThirdParty\Http\Controllers\ThirdPartyController;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class ThirdPartyServiceProvider extends ServiceProvider
@@ -27,6 +29,8 @@ class ThirdPartyServiceProvider extends ServiceProvider
             $this->commands([
                 MakeThirdPartyCommand::class,
             ]);
+
+            Route::get('/', [ThirdPartyController::class, 'index']);
         }
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'thirdparty');
