@@ -1,6 +1,6 @@
 {
     "name": "binarcode/laravel-thirdparty",
-    "description": "",
+    "description": "Third party package for laravel.",
     "keywords": [
         "binarcode",
         "laravel-thirdparty"
