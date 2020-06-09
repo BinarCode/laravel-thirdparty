@@ -1,7 +1,7 @@
 <?php
 
-use BinarCode\LaravelThirdParty\Models\ThirdParty;
 use \Faker\Generator;
+use BinarCode\LaravelThirdParty\Models\ThirdParty;
 
 /* @var Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(ThirdParty::class, function (Generator $faker) {

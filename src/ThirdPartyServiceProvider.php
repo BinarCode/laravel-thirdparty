@@ -32,7 +32,6 @@ class ThirdPartyServiceProvider extends ServiceProvider
                 });
             });
         }
-
     }
 
     public function register()
