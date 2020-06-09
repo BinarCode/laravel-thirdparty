@@ -11,11 +11,4 @@ class MakeThirdPartyCommandTest extends TestCase
     {
         $this->artisan('make:third-party')->expectsOutput(0);
     }
-
-    /** * @test */
-    public function the_config_value_value_is_used()
-    {
-        $this->artisan('make:third-party')
-            ->expectsOutput(0);
-    }
 }

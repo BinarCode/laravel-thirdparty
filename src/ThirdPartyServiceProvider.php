@@ -28,7 +28,7 @@ class ThirdPartyServiceProvider extends ServiceProvider
 
             Route::macro('thirdparty', function (string $prefix) {
                 Route::prefix($prefix)->group(function () {
-                    Route::get('/', [ThirdPartyController::class, 'index']);
+                    Route::apiResource('third-party', ThirdPartyController::class);
                 });
             });
         }

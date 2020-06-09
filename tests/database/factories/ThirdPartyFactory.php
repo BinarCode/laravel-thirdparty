@@ -7,5 +7,6 @@ use \Faker\Generator;
 $factory->define(ThirdParty::class, function (Generator $faker) {
     return [
         'name' => $faker->word,
+        'class' => $faker->word,
     ];
 });

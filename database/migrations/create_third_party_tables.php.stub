@@ -15,8 +15,8 @@ class CreateThirdPartyTables extends Migration
             $table->string('name', 100);
             $table->text('description')->nullable();
             $table->string('url', 300)->nullable();
-            $table->boolean('active')->default(false)->comment('If cofigurations done.');
-            $table->boolean('enabled')->default(false)->comment('Could be used');
+            $table->boolean('active')->default(false);
+            $table->string('class', 300);
             $table->json('private_information')->nullable();
             $table->json('public_information')->nullable();
 

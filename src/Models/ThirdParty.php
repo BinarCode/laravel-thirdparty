@@ -26,8 +26,8 @@ class ThirdParty extends Model
     ];
 
     protected $casts = [
-        'active' => 'bool',
-        'enabled' => 'bool',
+        'active' => 'boolean',
+        'enabled' => 'boolean',
         'private_information' => 'json',
         'public_information' => 'json',
     ];
@@ -36,4 +36,24 @@ class ThirdParty extends Model
     {
         return config('thirdparty.table_name');
     }
+
+    public function setPrivateKey($key, $value): ThirdParty
+    {
+        $this->private_information[$key] = $value;
+
+        $this->save();
+
+        return $this;
+    }
+
+    public function setPrivate(array $info): ThirdParty
+    {
+        $this->private_information = $info;
+
+        $this->save();
+
+        return $this;
+    }
+
+
 }

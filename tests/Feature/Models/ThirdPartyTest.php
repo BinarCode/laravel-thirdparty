@@ -13,6 +13,7 @@ class ThirdPartyTest extends TestCase
         /** * @var ThirdParty $thirdParty*/
         $thirdParty = ThirdParty::create([
             'key' => 'facebook_sso',
+            'class' => 'class',
             'name' => 'Facebook SSO',
         ]);
 
