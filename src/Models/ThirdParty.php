@@ -54,6 +54,4 @@ class ThirdParty extends Model
 
         return $this;
     }
-
-
 }
